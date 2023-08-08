@@ -1,0 +1,145 @@
+.box_slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+.slider {
+  width: 68%;
+  direction: ltr;
+  margin-left: 20px;
+}
+.main_slider {
+  position: relative;
+}
+.slider .item img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+.baner {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.baner .baner_top,
+.baner .baner_bottom {
+  width: 100%;
+}
+.baner .baner_top img,
+.baner .baner_bottom img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+.slider .owl-carousel .owl-nav button.owl-next,
+.slider .owl-carousel .owl-nav button.owl-prev {
+  display: none;
+}
+.slider .owl-theme .owl-dots {
+  position: absolute;
+  bottom: 0;
+  right: 45%;
+}
+.slider .owl-theme .owl-dots .owl-dot.active span {
+  background-color: var(--hover);
+}
+.slider .owl-theme .owl-dots .owl-dot span {
+  background-color: var(--primary);
+}
+/*
+    Start Special Offer
+*/
+.special_offer {
+  width: 100%;
+  direction: ltr;
+  margin: 30px 0;
+}
+.special_offer .sp_off_title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.special_offer .sp_off_title span {
+  color: var(--primary);
+}
+.box_offer {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.box_offer .sp_discount {
+  border-radius: 0;
+  min-height: 30px;
+  min-width: 137px;
+  font-weight: 400;
+  margin: 0;
+  z-index: 9;
+  background-color: var(--primary);
+  color: #fff;
+  width: 163px;
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  padding: 4px;
+  padding-top: 31px;
+  right: -92px;
+  font-family: rotin;
+  top: -10px;
+  transform: rotate(45deg);
+  line-height: 2;
+}
+.special_img {
+  width: 35%;
+}
+.special_img img {
+  max-width: 100%;
+}
+.special_text {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.special_text .sp_title {
+  width: 100%;
+  text-align: center;
+}
+.special_text .sp_title h4 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.special_text .sp_price {
+  width: 100%;
+  text-align: center;
+}
+.special_text .sp_price del {
+  width: 100%;
+  display: block;
+  font-size: 1.5rem;
+  color: transparent;
+  text-shadow: 0 0 2px var(--gray-light);
+}
+.special_text .sp_price ins {
+  width: 100%;
+  display: block;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.special_text a {
+  border: 1px solid;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.offer .owl-dots {
+  display: none;
+}
+
+/*
+    End Special Offer
+*/

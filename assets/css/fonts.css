@@ -1,0 +1,38 @@
+@font-face {
+  font-family: rotin;
+  font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/KalamehWeb(FaNum)-Light.woff");
+}
+
+@font-face {
+  font-family: rotin;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/assets/fonts/KalamehWeb(FaNum)-Regular.woff");
+}
+
+@font-face {
+  font-family: rotin;
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/KalamehWeb(FaNum)-Medium.woff");
+}
+
+@font-face {
+  font-family: rotin;
+  font-style: normal;
+  font-weight: bold;
+  src: url("/assets/fonts/KalamehWeb(FaNum)-Bold.woff");
+}
+
+@font-face {
+  font-family: rotin;
+  font-style: normal;
+  font-weight: 900;
+  src: url("/assets/fonts/KalamehWeb(FaNum)-Black.woff");
+}
+body,
+button {
+  font-family: 'rotin';
+}
