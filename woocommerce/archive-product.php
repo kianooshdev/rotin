@@ -17,19 +17,14 @@
 
 defined( 'ABSPATH' ) || exit;
 
-get_header( 'shop' );
+get_header( 'shop' ); ?>
 
-/**
- * Hook: woocommerce_before_main_content.
- *
- * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
- * @hooked woocommerce_breadcrumb - 20
- * @hooked WC_Structured_Data::generate_website_data() - 30
- */
-do_action( 'woocommerce_before_main_content' );
-
-?>
-<header class="woocommerce-products-header">
+	<div class="archive_breadcrumb">
+		<div class="container">
+			<?php get_template_part('template/single/breadcrumb'); ?>
+		</div>
+	</div>
+	<header class="woocommerce-products-header">
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 	<?php endif; ?>
@@ -44,6 +39,23 @@ do_action( 'woocommerce_before_main_content' );
 	do_action( 'woocommerce_archive_description' );
 	?>
 </header>
+	<?php
+/**
+ * Hook: woocommerce_before_main_content.
+ *
+ * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+ * @hooked woocommerce_breadcrumb - 20
+ * @hooked WC_Structured_Data::generate_website_data() - 30
+ */
+do_action( 'woocommerce_before_main_content' );?>
+
+<div class="container">
+	<div class="archive_product woocommerce">
+		<div class="archive box_shadow">
+			<div class="sidebar_archive">
+				<?php dynamic_sidebar( 'shop_sidebar' ); ?>
+			</div>
+
 <?php
 if ( woocommerce_product_loop() ) {
 
@@ -54,9 +66,37 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_result_count - 20
 	 * @hooked woocommerce_catalog_ordering - 30
 	 */
-	do_action( 'woocommerce_before_shop_loop' );
-
+	do_action( 'woocommerce_before_shop_loop' ); 
 	woocommerce_product_loop_start();
+	?>
+	 <div class="archive_content">
+				<div class="ordering">
+					<div class="product_header">
+                	    <div class="product_header_left">
+                	        <div class="custom_select">
+                	            <?php woocommerce_catalog_ordering(); ?>
+                	        </div>
+                	    </div>
+                	    <div class="product_header_right">
+                	        <div class="products_view">
+                	            <a href="javascript:Void(0)" class="shorting_icon grid active"> 
+									<svg class="icon">
+         							   <use xlink:href="<?php echo get_template_directory_uri().'/assets/image/svg-sprite.svg#grid'?>"></use>
+         							</svg>
+                	            </a>
+                	            <a href="javascript:Void(0)" class="shorting_icon list">
+									<svg class="icon">
+         							   <use xlink:href="<?php echo get_template_directory_uri().'/assets/image/svg-sprite.svg#hamberger'?>"></use>
+         							</svg>
+                	            </a>
+                	        </div>
+                	    </div>
+                	</div>
+				</div>
+
+				<div class="product_box shop_container grid">
+	
+	<?php 
 
 	if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
@@ -65,9 +105,9 @@ if ( woocommerce_product_loop() ) {
 			/**
 			 * Hook: woocommerce_shop_loop.
 			 */
-			do_action( 'woocommerce_shop_loop' );
+			do_action( 'woocommerce_shop_loop' ); 
 
-			wc_get_template_part( 'content', 'product' );
+			wc_get_template_part( 'template/product/product_box' );
 		}
 	}
 
@@ -86,7 +126,10 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked wc_no_products_found - 10
 	 */
 	do_action( 'woocommerce_no_products_found' );
-}
+}?>
+		</div>
+	</div>
+<?php
 
 /**
  * Hook: woocommerce_after_main_content.
@@ -99,7 +142,10 @@ do_action( 'woocommerce_after_main_content' );
  * Hook: woocommerce_sidebar.
  *
  * @hooked woocommerce_get_sidebar - 10
- */
-do_action( 'woocommerce_sidebar' );
 
-get_footer( 'shop' );
+do_action( 'woocommerce_sidebar' );
+ */?>
+ 		</div>
+ 	</div>
+</div>
+<?php get_footer( 'shop' );

@@ -31,7 +31,7 @@
 }
 .main_header .search input[type="search"] {
   width: 70%;
-  padding: 10px 43px;
+  padding: 10px 43px !important;
   font-size: 1.4rem;
 }
 .main_header .login {
@@ -246,15 +246,6 @@ li.mega-menu-col:last-child {
 }
 .dropdown-toggle {
   transition: all 0.3s ease-in-out;
-}
-.dropdown-toggle::after {
-  display: inline-block;
-  margin-right: 0.255em;
-  vertical-align: sub;
-  content: "\f078";
-  font-family: "Font Awesome 5 Pro";
-  font-size: 0.7rem;
-  border: none;
 }
 button.navbar-toggler {
   padding: 0;

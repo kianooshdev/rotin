@@ -34,6 +34,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			</tr>
 		</thead>
 		<tbody>
+	
 			<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
 			<?php

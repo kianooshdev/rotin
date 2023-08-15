@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 }
-.slider {
+.box_slider .slider {
   width: 68%;
   direction: ltr;
   margin-left: 20px;
@@ -44,102 +44,147 @@
   background-color: var(--primary);
 }
 /*
-    Start Special Offer
+    Start Slider Product Sale
 */
-.special_offer {
-  width: 100%;
-  direction: ltr;
-  margin: 30px 0;
-}
-.special_offer .sp_off_title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-}
-.special_offer .sp_off_title span {
-  color: var(--primary);
-}
-.box_offer {
+/*
+    End Slider Product Sale
+*/
+
+/*
+    Start Service
+*/
+.box_services {
   display: flex;
-  width: 100%;
-  flex-direction: row-reverse;
-  position: relative;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
-.box_offer .sp_discount {
-  border-radius: 0;
-  min-height: 30px;
-  min-width: 137px;
-  font-weight: 400;
-  margin: 0;
-  z-index: 9;
-  background-color: var(--primary);
-  color: #fff;
-  width: 163px;
-  font-size: 16px;
-  position: absolute;
-  text-align: center;
-  padding: 4px;
-  padding-top: 31px;
-  right: -92px;
-  font-family: rotin;
-  top: -10px;
-  transform: rotate(45deg);
-  line-height: 2;
+.box_services .service {
+  padding: 11px 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+  background-color: #fff;
 }
-.special_img {
-  width: 35%;
-}
-.special_img img {
-  max-width: 100%;
-}
-.special_text {
-  width: 65%;
+.service_detail {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
-.special_text .sp_title {
-  width: 100%;
-  text-align: center;
-}
-.special_text .sp_title h4 {
-  font-size: 1.7rem;
-  font-weight: 600;
-}
-.special_text .sp_price {
-  width: 100%;
-  text-align: center;
-}
-.special_text .sp_price del {
-  width: 100%;
-  display: block;
-  font-size: 1.5rem;
-  color: transparent;
-  text-shadow: 0 0 2px var(--gray-light);
-}
-.special_text .sp_price ins {
-  width: 100%;
-  display: block;
-  font-size: 2rem;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-}
-.special_text a {
-  border: 1px solid;
-  padding: 10px 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.7rem;
+span.service_title {
+  font-size: 1.3rem;
   font-weight: 500;
 }
-.offer .owl-dots {
-  display: none;
+span.service_desc {
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 /*
-    End Special Offer
+    Start Product
 */
+.section_product {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.section_product .box_product {
+  width: 24%;
+}
+
+/*
+    Start Category Pic
+*/
+.category_pic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.cate_img img {
+  opacity: 0.7;
+  transition: all 0.5s ease-in-out;
+}
+.cate_img:hover img {
+  opacity: 1;
+}
+
+/*
+    Start Slider Product
+*/
+.slider {
+  width: 100%;
+  direction: ltr;
+}
+.slider .slider_title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--heading);
+}
+/*
+    Start Count Down
+*/
+.proposition {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-color: #f3f3f3;
+}
+.body_proposition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 100px;
+}
+.countdown_banner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.countdown_banner h4 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+.countdown_banner h3 {
+  font-size: 8rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+.countdown_banner a {
+  border: 1px solid var(--primary);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 100px;
+  display: inline-block;
+  margin: 0 85px;
+}
+.img_proposition {
+}
+.img_proposition img {
+}
+.countdown_time {
+  display: flex;
+  direction: ltr;
+  margin-bottom: 30px;
+}
+.countdown_box {
+  width: 25%;
+  padding: 0 15px;
+}
+.countdown-wrap {
+  background: #fff;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+.countdown_box .countdown {
+  font-size: 2em;
+}
+.countdown_box .cd_text {
+  display: block;
+}

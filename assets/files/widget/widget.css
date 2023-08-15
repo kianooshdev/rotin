@@ -1,0 +1,176 @@
+/*
+    Sidebar
+*/
+.sidebar {
+  width: 30%;
+}
+.sidebar .slider {
+  width: 100%;
+  direction: ltr;
+  background-color: #fff;
+  padding: 10px;
+  overflow: hidden;
+}
+.block_title h4 {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 500;
+}
+.slide_progress {
+  background-color: var(--primary);
+  width: 0;
+  max-width: 100%;
+  height: 1px;
+}
+.progress {
+  position: relative;
+  height: 1px;
+  max-width: 100%;
+  background-color: var(--primary);
+}
+.progress .bar {
+  position: absolute;
+  background-color: #ffffff;
+  width: 0px;
+  height: 1px;
+  animation: progres 4s infinite linear;
+}
+@keyframes progres {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.widget {
+  max-width: 100%;
+  background: #fff;
+  margin-top: 28px;
+  padding: 10px;
+}
+.widget .widget_title {
+  font-size: 1.7rem;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+.widget_rexent_post {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+.widget_rexent_post li {
+  width: 100%;
+}
+.widget_rexent_post .post_main {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.post_main .post_img {
+  width: 50%;
+}
+.post_main .post_img img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+.post_main .post_content {
+}
+.post_main .post_content h6 a {
+  font-weight: 500;
+}
+.post_main .post_content h6 a:hover {
+  color: var(--hover);
+}
+.post_main .post_content p {
+  color: var(--gray-light);
+  font-size: 1.2rem;
+}
+
+.image_widget {
+  margin-top: 28px;
+  padding: 10px;
+  float: right;
+  position: relative;
+}
+.shop_banner {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+}
+.shop_banner .banner_img {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.shop_banner .banner_img:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.shop_bn_content {
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  color: #fff;
+}
+.shop_subtitle {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.shop_title {
+  font-size: 2.52rem;
+  font-weight: 950;
+  margin-bottom: 10px;
+}
+.shop_btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  border-radius: 7px;
+}
+.shop_btn:hover {
+  color: #fff;
+  background-color: var(--hover);
+}
+.related_post {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px 17px;
+  margin: 30px 0;
+}
+.related_post .slider_title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--heading);
+}
+.box_related {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
